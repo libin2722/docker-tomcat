@@ -27,4 +27,4 @@ ENTRYPOINT sh $CATALINA_HOME/bin/startup.sh && tail -f $CATALINA_HOME/logs/catal
 
 EXPOSE 8080 8443
 
-#ONBUILD ADD . ${APP_DIR}
+ONBUILD ADD ./webapps/ ${APP_DIR}/ROOT/
